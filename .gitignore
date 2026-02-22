@@ -1,0 +1,25 @@
+# Ignore large libraries and build artifacts
+node_modules
+.next
+out
+.DS_Store
+.turbo
+coverage
+*.tsbuildinfo
+
+# Environment variables
+.env*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Editor / OS artifacts
+.idea
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+Thumbs.db
