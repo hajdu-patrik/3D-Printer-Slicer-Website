@@ -25,3 +25,14 @@ This frontend acts as the presentation and communication layer for the 3D Printe
 
 - API repository: https://github.com/hajdu-patrik/3D-Printer-Slicer-API
 - Swagger docs (when the API is running): http://localhost:3000/docs
+
+---
+
+## 📦 Deployment
+
+This project is configured for automated deployment via **Vercel**.
+Any push to the `main` branch automatically triggers a new build and deployment.
+
+| Environment | Status |
+| :--- | :--- |
+| **Production** | [![Vercel App](https://img.shields.io/badge/Visit-Live_App-success?style=for-the-badge&logo=vercel)](https://3d-printer-slicer-website.vercel.app) |
