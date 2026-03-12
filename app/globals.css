@@ -33,6 +33,25 @@ img {
   padding-right: 1.25rem;
 }
 
+.feature-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: feature-marquee 80s linear infinite;
+}
+
+.feature-marquee-row {
+  display: flex;
+  align-items: stretch;
+  flex-shrink: 0;
+  gap: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.feature-marquee-track:hover {
+  animation-play-state: paused;
+}
+
 @keyframes showcase-marquee {
   from {
     transform: translateX(0);
@@ -40,5 +59,30 @@ img {
 
   to {
     transform: translateX(-50%);
+  }
+}
+
+@keyframes feature-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.loader-progress {
+  transform-origin: left center;
+  animation: page-loader-progress 2.4s ease-out forwards;
+}
+
+@keyframes page-loader-progress {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
   }
 }

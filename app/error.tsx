@@ -1,20 +1,38 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect } from 'react';
+import { documentationUrl } from './config/links';
 
 type ErrorProps = {
   error: Error & { digest?: string };
-  reset: () => void;
 };
 
-export default function AppError({ error, reset }: Readonly<ErrorProps>) {
+export default function AppError({ error }: Readonly<ErrorProps>) {
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#ffe8d2_0%,_#fff8f1_46%)] pb-14">
+      <header className="mx-auto flex w-[min(1240px,94vw)] items-center justify-between py-6">
+        <Link className="inline-flex items-center gap-3" href="/" aria-label="Home">
+          <Image
+            src="/favicon.ico"
+            alt="3D Printer Slicer API icon"
+            width={44}
+            height={44}
+            priority
+            unoptimized
+            className="rounded-full shadow-soft"
+          />
+          <span className="text-base font-extrabold tracking-tight text-brand-ink sm:text-lg">
+            3D Printer Slicer API
+          </span>
+        </Link>
+      </header>
+
       <section className="mx-auto w-[min(820px,92vw)] py-20">
         <div className="rounded-2xl border-2 border-brand-ink bg-white p-8 shadow-soft sm:p-10">
           <p className="inline-block rounded-full border-2 border-brand-ink bg-brand-peach px-4 py-2 text-xs font-bold uppercase tracking-wide text-brand-ink sm:text-sm">
@@ -24,22 +42,32 @@ export default function AppError({ error, reset }: Readonly<ErrorProps>) {
             Something went wrong.
           </h1>
           <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-700 sm:text-lg">
-            Try reloading this section, or return to the homepage.
+            Press try again to restart the main page.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <button
               className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-gradient-to-b from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:brightness-105"
-              onClick={reset}
+              onClick={() => globalThis.location.assign('/')}
               type="button"
             >
               Try again
             </button>
-            <Link
-              className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-white px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:bg-[#fff1e4]"
-              href="/"
+            <a
+              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-ink bg-white px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:bg-[#fff1e4]"
+              href={documentationUrl}
+              target="_blank"
+              rel="noreferrer"
             >
-              Back to home
-            </Link>
+              <Image
+                src="/GitHub.webp"
+                alt=""
+                aria-hidden
+                width={18}
+                height={18}
+                className="h-[18px] w-[18px] object-contain"
+              />
+              Documentation
+            </a>
           </div>
         </div>
       </section>

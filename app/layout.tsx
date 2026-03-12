@@ -77,6 +77,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
     <html lang="en">
       <body className="min-h-screen bg-brand-cream text-brand-ink antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { documentationUrl } from './config/links';
 
 const REDIRECT_SECONDS = 3;
 
@@ -27,7 +28,7 @@ export default function NotFound() {
 
   return (
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#ffe8d2_0%,_#fff8f1_46%)] pb-14">
-      <header className="mx-auto flex w-[min(1120px,92vw)] items-center justify-between py-6">
+      <header className="mx-auto flex w-[min(1240px,94vw)] items-center justify-between py-6">
         <Link className="inline-flex items-center gap-3" href="/" aria-label="Home">
           <Image
             src="/favicon.ico"
@@ -44,7 +45,7 @@ export default function NotFound() {
         </Link>
       </header>
 
-      <section className="mx-auto w-[min(820px,92vw)] py-12 sm:py-16">
+      <section className="mx-auto w-[min(820px,92vw)] py-20">
         <div className="rounded-2xl border-2 border-brand-ink bg-white p-8 shadow-soft sm:p-10">
           <p className="inline-block rounded-full border-2 border-brand-ink bg-brand-peach px-4 py-2 text-xs font-bold uppercase tracking-wide text-brand-ink sm:text-sm">
             Error 404
@@ -67,12 +68,20 @@ export default function NotFound() {
               Go back now
             </Link>
             <a
-              className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-white px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:bg-[#fff1e4]"
-              href="https://github.com/hajdu-patrik/3D-Printer-Slicer-API"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-ink bg-white px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:bg-[#fff1e4]"
+              href={documentationUrl}
               target="_blank"
               rel="noreferrer"
             >
-              Open project repository
+              <Image
+                src="/GitHub.webp"
+                alt=""
+                aria-hidden
+                width={18}
+                height={18}
+                className="h-[18px] w-[18px] object-contain"
+              />
+              Documentation
             </a>
           </div>
         </div>
