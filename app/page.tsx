@@ -9,7 +9,7 @@ const schema = {
   name: '3D Printer Slicer API',
   url: 'https://3d-printer-slicer-api.example.com',
   description:
-    'Modern API for automated FDM and SLA slicing, conversion, orientation, and pricing workflows.',
+    'Modern API for automated FDM and SLA slicing, 3D model preparation, orientation, and pricing workflows.',
   inLanguage: 'en',
   publisher: {
     '@type': 'Organization',
@@ -81,8 +81,8 @@ export default function HomePage() {
             </h1>
           </div>
           <p className="mt-5 max-w-5xl text-base leading-8 text-neutral-700 sm:text-lg">
-            Transform CAD, mesh, vector, and image inputs into printable outputs through a single API.
-            The platform streamlines file conversion, model orientation, slicing execution, and cost estimation
+            Transform CAD and mesh inputs into printable outputs through a single API.
+            The platform streamlines 3D model preparation, model orientation, slicing execution, and cost estimation
             for reliable FDM and SLA manufacturing workflows.
           </p>
         </section>
@@ -95,7 +95,7 @@ export default function HomePage() {
             </h2>
           </div>
           <p className="mt-3 max-w-5Xl text-base font-semibold leading-8 text-brand-ink sm:text-lg">
-            End-to-end print workflow intelligence, from multi-format intake to engine-level slicing and pricing output.
+            End-to-end print workflow intelligence, from 3D and CAD intake to engine-level slicing and pricing output.
           </p>
           <p className="mt-1 max-w-5xl text-sm leading-7 text-neutral-700 sm:text-base">
             Designed for platform teams that need predictable, high-throughput, API-first 3D manufacturing operations.

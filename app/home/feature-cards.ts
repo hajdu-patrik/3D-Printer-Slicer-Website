@@ -14,9 +14,9 @@ export const featureCardThemeClasses: Record<FeatureCardTheme, string> = {
 
 export const featureCards: FeatureCard[] = [
   {
-    title: 'Supported File Formats',
+    title: '3D and CAD File Formats',
     description:
-      'Accepts direct 3D, CAD, vector, image, and ZIP inputs including STL, OBJ, 3MF, STEP, IGS, DXF, SVG, PDF, JPG, PNG, and more.'
+      'Accepts direct 3D, CAD, and ZIP inputs including STL, OBJ, 3MF, STEP, IGS, and ZIP archives.'
   },
   {
     title: 'Dual Engine Routing',

@@ -2,6 +2,17 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.2] - 2026-05-14
+
+### Removed
+
+- Removed all website claims for non-model source-file workflows and related import formats that are outside the supported slicing scope.
+
+### Scope Clarification
+
+- Reworded public product copy, SEO metadata, and feature-card descriptions around direct 3D, CAD, and ZIP-backed slicing workflows only.
+- Clarified the scope because the project should only advertise workflows it intends to maintain; this keeps user expectations aligned with the supported slicer API surface.
+
 ## [1.0.1] - 2026-03-12
 
 ### Added

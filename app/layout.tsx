@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     template: '%s | 3D Printer Slicer API'
   },
   description:
-    'Modern 3D printing backend for FDM and SLA workflows with intelligent orientation, file conversion, slicing automation, and dynamic pricing.',
+    'Modern 3D printing backend for FDM and SLA workflows with intelligent orientation, 3D model preparation, slicing automation, and dynamic pricing.',
   applicationName: '3D Printer Slicer API',
   keywords: [
     '3D printing API',
@@ -20,12 +20,10 @@ export const metadata: Metadata = {
     'automated print pricing',
     'CAD to STL',
     '3D model orientation',
-    '3D file conversion',
+    '3D model preparation',
     '3D printing backend',
     'slicing automation',
     'dynamic print pricing',
-    'Vector to STL',
-    'Image to STL',
     '3D printing workflow',
     '3D print automation'
   ],
@@ -42,7 +40,7 @@ export const metadata: Metadata = {
     siteName: '3D Printer Slicer API',
     title: '3D Printer Slicer API | Automated FDM & SLA Slicing',
     description:
-      'Automate conversion, orientation, slicing, and pricing in one scalable API for modern 3D printing workflows.',
+      'Automate 3D model preparation, orientation, slicing, and pricing in one scalable API for modern 3D printing workflows.',
     images: [
       {
         url: '/favicon.ico',
@@ -56,7 +54,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '3D Printer Slicer API | Automated FDM & SLA Slicing',
     description:
-      'Production-ready backend for 3D file conversion, slicing automation, and dynamic print pricing.',
+      'Production-ready backend for 3D model preparation, slicing automation, and dynamic print pricing.',
     images: ['/favicon.ico']
   },
   robots: {
