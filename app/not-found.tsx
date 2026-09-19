@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import Button from './components/ui/Button';
 import { documentationUrl } from './config/links';
 
 const REDIRECT_SECONDS = 3;
@@ -30,13 +31,17 @@ export default function NotFound() {
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,#ffe8d2_0%,#fff8f1_46%)] pb-14">
       <header className="mx-auto flex w-[min(1240px,94vw)] items-center justify-between py-6">
         <Link className="inline-flex items-center gap-3" href="/" aria-label="Home">
+          {/* sizes is intentionally larger than the 44px shown size: this round logo has fine
+              text detail that visibly softens in AVIF/WebP below ~128px source width. */}
           <Image
-            src="/favicon.ico"
+            src="/logo.png"
             alt="3D Printer Slicer API icon"
             width={44}
             height={44}
+            sizes="128px"
+            quality={90}
             priority
-            unoptimized
+            fetchPriority="high"
             className="rounded-full shadow-soft"
           />
           <span className="text-base font-extrabold tracking-tight text-brand-ink sm:text-lg">
@@ -61,28 +66,21 @@ export default function NotFound() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link
-              className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-linear-to-b/srgb from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:brightness-105"
-              href="/"
-            >
+            <Button as="link" variant="primary-gradient" href="/">
               Go back now
-            </Link>
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-ink bg-white px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:bg-[#fff1e4]"
-              href={documentationUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
+            </Button>
+            <Button as="a" variant="secondary-doc" href={documentationUrl} target="_blank" rel="noreferrer">
               <Image
                 src="/GitHub.webp"
                 alt=""
                 aria-hidden
                 width={18}
                 height={18}
+                loading="eager"
                 className="h-[18px] w-[18px] object-contain"
               />
               Documentation
-            </a>
+            </Button>
           </div>
         </div>
       </section>

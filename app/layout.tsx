@@ -1,10 +1,15 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 import { Analytics } from "@vercel/analytics/next"
+import { siteUrl } from './config/links';
 import './globals.css';
 
+export const viewport: Viewport = {
+  themeColor: '#fff8f1'
+};
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://3d-printer-slicer-api.example.com'),
+  metadataBase: new URL(siteUrl),
   title: {
     default: '3D Printer Slicer API | Automated FDM & SLA Slicing',
     template: '%s | 3D Printer Slicer API'
@@ -31,7 +36,7 @@ export const metadata: Metadata = {
     canonical: '/'
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [{ url: '/favicon.ico', type: 'image/png' }],
     shortcut: '/favicon.ico'
   },
   openGraph: {
@@ -43,19 +48,19 @@ export const metadata: Metadata = {
       'Automate 3D model preparation, orientation, slicing, and pricing in one scalable API for modern 3D printing workflows.',
     images: [
       {
-        url: '/favicon.ico',
-        width: 64,
-        height: 64,
+        url: '/_next/image?url=%2Flogo.png&w=256&q=90',
+        width: 256,
+        height: 256,
         alt: '3D Printer Slicer API icon'
       }
     ]
   },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary',
     title: '3D Printer Slicer API | Automated FDM & SLA Slicing',
     description:
       'Production-ready backend for 3D model preparation, slicing automation, and dynamic print pricing.',
-    images: ['/favicon.ico']
+    images: ['/_next/image?url=%2Flogo.png&w=256&q=90']
   },
   robots: {
     index: true,

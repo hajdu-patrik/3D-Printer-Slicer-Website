@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import { sponsorUrl, documentationUrl, prusaSlicerUrl, orcaSlicerUrl } from './config/links';
+import Button from './components/ui/Button';
+import { sponsorUrl, documentationUrl, prusaSlicerUrl, orcaSlicerUrl, siteUrl } from './config/links';
 import { featureCards, featureCardThemeClasses, resolveFeatureCardTheme } from './home/feature-cards';
 import PageEntryLoader from './home/page-entry-loader';
 
@@ -7,7 +8,7 @@ const schema = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
   name: '3D Printer Slicer API',
-  url: 'https://3d-printer-slicer-api.example.com',
+  url: siteUrl,
   description:
     'Modern API for automated FDM and SLA slicing, 3D model preparation, orientation, and pricing workflows.',
   inLanguage: 'en',
@@ -15,6 +16,16 @@ const schema = {
     '@type': 'Organization',
     name: '3D Printer Slicer API'
   }
+};
+
+const softwareApplicationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: '3D Printer Slicer API',
+  description:
+    'Modern API for automated FDM and SLA slicing, 3D model preparation, orientation, and pricing workflows.',
+  url: siteUrl,
+  codeRepository: documentationUrl
 };
 
 const shellClassName = 'mx-auto w-[min(1120px,92vw)]';
@@ -26,18 +37,23 @@ export default function HomePage() {
     <>
       {/* SEO schema for search engines and rich results */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
       {/* Main content */}
       <PageEntryLoader>
         <main className="min-h-screen bg-[radial-gradient(circle_at_top,#ffe8d2_0%,#fff8f1_46%)] pb-14">
         <header className={`${shellClassName} flex items-center justify-between py-6`}>
           <a className="inline-flex items-center gap-3" href="/" aria-label="Home">
+            {/* sizes is intentionally larger than the 60px shown size: this round logo has fine
+                text detail that visibly softens in AVIF/WebP below ~128px source width. */}
             <Image
-              src="/favicon.ico"
+              src="/logo.png"
               alt="3D Printer Slicer API icon"
               width={60}
               height={60}
+              sizes="128px"
+              quality={90}
               priority
-              unoptimized
+              fetchPriority="high"
               draggable={false}
               className="select-none rounded-full shadow-soft"
             />
@@ -46,30 +62,21 @@ export default function HomePage() {
             </span>
           </a>
           <div className="flex items-center gap-3">
-            <a
-              href={sponsorUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-xl border-2 border-black bg-[#FFDD00] px-5 py-3 text-sm font-bold text-black transition hover:-translate-y-0.5 hover:brightness-105"
-            >
+            <Button as="a" variant="coffee" href={sponsorUrl} target="_blank" rel="noreferrer">
               ☕ Buy me a coffee
-            </a>
-            <a
-              className="inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-ink bg-white from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:brightness-105"
-              href={documentationUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
+            </Button>
+            <Button as="a" variant="primary-home" href={documentationUrl} target="_blank" rel="noreferrer">
               <Image
                 src="/GitHub.webp"
                 alt=""
                 aria-hidden
                 width={20}
                 height={20}
+                loading="eager"
                 className="h-[18px] w-[18px] object-contain"
               />
               Documentation
-            </a>
+            </Button>
           </div>
         </header>
 
@@ -139,12 +146,7 @@ export default function HomePage() {
 
             <div className="mt-6 grid gap-5 lg:grid-cols-2">
               <article className="relative rounded-2xl border-2 border-brand-ink bg-linear-to-b/srgb from-white to-[#fff4eb] p-5 shadow-soft sm:p-6">
-                <a
-                  href={prusaSlicerUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group relative z-10 flex h-52 items-center justify-center overflow-hidden transition hover:-translate-y-0.5 sm:h-56"
-                >
+                <Button as="a" variant="media" href={prusaSlicerUrl} target="_blank" rel="noreferrer">
                   <span className="absolute right-3 top-3 z-20 rounded-full border border-brand-ink bg-brand-peach px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-ink">
                     Integrated
                   </span>
@@ -155,7 +157,7 @@ export default function HomePage() {
                       height={500}
                     className="relative z-10 mx-auto w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-110 sm:h-full"
                   />
-                </a>
+                </Button>
                 <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-xl font-extrabold text-brand-ink">We currently integrate with PrusaSlicer v2.9.3</h3>
                   <span className="rounded-full border border-brand-ink bg-brand-peach/75 px-3 py-1 text-xs font-bold text-brand-ink">
@@ -169,12 +171,7 @@ export default function HomePage() {
               </article>
 
               <article className="relative rounded-2xl border-2 border-brand-ink bg-linear-to-b/srgb from-white to-[#ebf8ff] p-5 shadow-soft sm:p-6">
-                <a
-                  href={orcaSlicerUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="group relative z-10 flex h-52 items-center justify-center overflow-hidden transition hover:-translate-y-0.5 sm:h-56"
-                >
+                <Button as="a" variant="media" href={orcaSlicerUrl} target="_blank" rel="noreferrer">
                   <span className="absolute right-3 top-3 z-20 rounded-full border border-brand-ink bg-brand-peach px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-brand-ink">
                     Integrated
                   </span>
@@ -185,7 +182,7 @@ export default function HomePage() {
                     height={500}
                     className="relative z-10 mx-auto w-auto object-contain transition-transform duration-300 ease-out group-hover:scale-110 sm:h-full"
                   />
-                </a>
+                </Button>
                 <div className="mt-5 flex flex-wrap items-center justify-between gap-3">
                   <h3 className="text-xl font-extrabold text-brand-ink">We currently integrate with OrcaSlicer v2.3.1</h3>
                   <span className="rounded-full border border-brand-ink bg-brand-peach/75 px-3 py-1 text-xs font-bold text-brand-ink">

@@ -56,12 +56,14 @@ export default function PageEntryLoader({ children }: Readonly<PageEntryLoaderPr
           }`}
         >
           <Image
-            src="/favicon.ico"
+            src="/logo.png"
             alt="3D Printer Slicer API icon"
             width={250}
             height={250}
+            sizes="250px"
+            quality={90}
             priority
-            unoptimized
+            fetchPriority="high"
             draggable={false}
             className="rounded-full border-2 border-brand-ink bg-white p-1 shadow-soft"
           />
