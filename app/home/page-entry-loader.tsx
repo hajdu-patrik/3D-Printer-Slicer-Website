@@ -51,7 +51,7 @@ export default function PageEntryLoader({ children }: Readonly<PageEntryLoaderPr
         <div
           aria-live="polite"
           aria-label="Loading page"
-          className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-[radial-gradient(circle_at_top,_#ffe8d2_0%,_#fff8f1_46%)] transition-opacity duration-500 ${
+          className={`fixed inset-0 z-9999 flex flex-col items-center justify-center bg-[radial-gradient(circle_at_top,#ffe8d2_0%,#fff8f1_46%)] transition-opacity duration-500 ${
             isFadingOut ? 'opacity-0' : 'opacity-100'
           }`}
         >
@@ -69,7 +69,7 @@ export default function PageEntryLoader({ children }: Readonly<PageEntryLoaderPr
             Welcome to 3D Printer Slicer API
           </p>
           <div className="mt-8 h-2 w-64 overflow-hidden rounded-full border border-brand-ink/30 bg-white/70">
-            <span className="loader-progress block h-full w-full bg-gradient-to-r from-brand-peach to-brand-coral" />
+            <span className="loader-progress block h-full w-full bg-linear-to-r/srgb from-brand-peach to-brand-coral" />
           </div>
         </div>
       )}

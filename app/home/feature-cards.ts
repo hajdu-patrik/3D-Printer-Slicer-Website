@@ -8,8 +8,8 @@ export type FeatureCard = {
 };
 
 export const featureCardThemeClasses: Record<FeatureCardTheme, string> = {
-  prusa: 'bg-gradient-to-b from-white to-[#fff4eb]',
-  orca: 'bg-gradient-to-b from-white to-[#ebf8ff]'
+  prusa: 'bg-linear-to-b/srgb from-white to-[#fff4eb]',
+  orca: 'bg-linear-to-b/srgb from-white to-[#ebf8ff]'
 };
 
 export const featureCards: FeatureCard[] = [

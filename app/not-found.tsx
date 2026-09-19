@@ -27,7 +27,7 @@ export default function NotFound() {
   }, [router, secondsLeft]);
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#ffe8d2_0%,_#fff8f1_46%)] pb-14">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,#ffe8d2_0%,#fff8f1_46%)] pb-14">
       <header className="mx-auto flex w-[min(1240px,94vw)] items-center justify-between py-6">
         <Link className="inline-flex items-center gap-3" href="/" aria-label="Home">
           <Image
@@ -51,18 +51,18 @@ export default function NotFound() {
             Error 404
           </p>
 
-          <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight text-brand-ink sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight text-brand-ink sm:text-5xl sm:leading-none">
             This page was not found.
           </h1>
 
-          <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-700 sm:text-lg">
+          <p className="mt-4 max-w-2xl text-base leading-8 text-neutral-700 sm:text-lg sm:leading-7">
             You will be redirected to the original homepage in{' '}
             <span className="font-extrabold text-brand-ink">{secondsLeft}</span> seconds.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
-              className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-gradient-to-b from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:brightness-105"
+              className="inline-flex items-center justify-center rounded-xl border-2 border-brand-ink bg-linear-to-b/srgb from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition hover:-translate-y-0.5 hover:brightness-105"
               href="/"
             >
               Go back now

@@ -28,7 +28,7 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       {/* Main content */}
       <PageEntryLoader>
-        <main className="min-h-screen bg-[radial-gradient(circle_at_top,_#ffe8d2_0%,_#fff8f1_46%)] pb-14">
+        <main className="min-h-screen bg-[radial-gradient(circle_at_top,#ffe8d2_0%,#fff8f1_46%)] pb-14">
         <header className={`${shellClassName} flex items-center justify-between py-6`}>
           <a className="inline-flex items-center gap-3" href="/" aria-label="Home">
             <Image
@@ -76,11 +76,11 @@ export default function HomePage() {
         {/* Hero section */}
         <section className={`${shellClassName} py-10 sm:py-14`}>
           <div className="relative max-w-6xl pr-36 sm:pr-44 lg:pr-52">
-            <h1 className="mt-5 max-w-5xl text-3xl font-black leading-tight tracking-tight text-brand-ink sm:text-4xl lg:text-5xl">
+            <h1 className="mt-5 max-w-5xl text-3xl font-black leading-tight tracking-tight text-brand-ink sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
               Production-ready slicing automation and pricing intelligence for modern 3D print platforms.
             </h1>
           </div>
-          <p className="mt-5 max-w-5xl text-base leading-8 text-neutral-700 sm:text-lg">
+          <p className="mt-5 max-w-5xl text-base leading-8 text-neutral-700 sm:text-lg sm:leading-7">
             Transform CAD and mesh inputs into printable outputs through a single API.
             The platform streamlines 3D model preparation, model orientation, slicing execution, and cost estimation
             for reliable FDM and SLA manufacturing workflows.
@@ -94,13 +94,13 @@ export default function HomePage() {
               Complete capability stack for production-grade slicing automation.
             </h2>
           </div>
-          <p className="mt-3 max-w-5Xl text-base font-semibold leading-8 text-brand-ink sm:text-lg">
+          <p className="mt-3 max-w-5Xl text-base font-semibold leading-8 text-brand-ink sm:text-lg sm:leading-7">
             End-to-end print workflow intelligence, from 3D and CAD intake to engine-level slicing and pricing output.
           </p>
-          <p className="mt-1 max-w-5xl text-sm leading-7 text-neutral-700 sm:text-base">
+          <p className="mt-1 max-w-5xl text-sm leading-7 text-neutral-700 sm:text-base sm:leading-6">
             Designed for platform teams that need predictable, high-throughput, API-first 3D manufacturing operations.
           </p>
-          <div className="mt-5 overflow-hidden rounded-3xl backdrop-blur-sm sm:p-6">
+          <div className="mt-5 overflow-hidden rounded-3xl backdrop-blur-xs sm:p-6">
             <div className="feature-marquee-track">
               <div className="feature-marquee-row">
                 {marqueeFeatureCards.map((feature, index) => {
@@ -115,7 +115,7 @@ export default function HomePage() {
                       className={`h-full w-[min(320px,82vw)] shrink-0 rounded-2xl border-2 border-brand-ink p-6 ${themeClassName} ${feature.className ?? ''}`}
                     >
                       <h2 className="text-lg font-extrabold text-brand-ink">{feature.title}</h2>
-                      <p className="mt-2 text-sm leading-7 text-neutral-700 sm:text-base">{feature.description}</p>
+                      <p className="mt-2 text-sm leading-7 text-neutral-700 sm:text-base sm:leading-6">{feature.description}</p>
                     </article>
                   );
                 })}
@@ -132,13 +132,13 @@ export default function HomePage() {
                 Built for PrusaSlicer and OrcaSlicer production workflows.
               </h2>
             </div>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-neutral-700 sm:text-base">
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-neutral-700 sm:text-base sm:leading-6">
               The API currently runs validated integrations with both engines below. Each engine is maintained one
               release behind the latest stable version to preserve compatibility and deployment reliability.
             </p>
 
             <div className="mt-6 grid gap-5 lg:grid-cols-2">
-              <article className="relative rounded-2xl border-2 border-brand-ink bg-gradient-to-b from-white to-[#fff4eb] p-5 shadow-soft sm:p-6">
+              <article className="relative rounded-2xl border-2 border-brand-ink bg-linear-to-b/srgb from-white to-[#fff4eb] p-5 shadow-soft sm:p-6">
                 <a
                   href={prusaSlicerUrl}
                   target="_blank"
@@ -162,13 +162,13 @@ export default function HomePage() {
                     Latest: v2.9.4
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-7 text-neutral-700 sm:text-base">
+                <p className="mt-3 text-sm leading-7 text-neutral-700 sm:text-base sm:leading-6">
                   Currently one stable release behind the newest public version, ensuring controlled upgrades with low
                   regression risk across active workloads.
                 </p>
               </article>
 
-              <article className="relative rounded-2xl border-2 border-brand-ink bg-gradient-to-b from-white to-[#ebf8ff] p-5 shadow-soft sm:p-6">
+              <article className="relative rounded-2xl border-2 border-brand-ink bg-linear-to-b/srgb from-white to-[#ebf8ff] p-5 shadow-soft sm:p-6">
                 <a
                   href={orcaSlicerUrl}
                   target="_blank"
@@ -192,7 +192,7 @@ export default function HomePage() {
                     Latest: v2.3.2
                   </span>
                 </div>
-                <p className="mt-3 text-sm leading-7 text-neutral-700 sm:text-base">
+                <p className="mt-3 text-sm leading-7 text-neutral-700 sm:text-base sm:leading-6">
                   The current project integration targets the official v2.3.1 release and remains one version behind
                   for predictable rollouts and consistent slicing behavior.
                 </p>
