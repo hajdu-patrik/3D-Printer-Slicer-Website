@@ -41,12 +41,3 @@ Any push to the `main` branch automatically triggers a new build and deployment.
 The website header links directly to the API documentation repository:
 
 - Documentation repo: https://github.com/hajdu-patrik/3D-Printer-Slicer-API/blob/main/README.md
-
----
-
-## ❤️ Sponsor Options
-
-If this project helps your workflow, you can support ongoing development here:
-
-- Buy Me a Coffee: https://www.buymeacoffee.com/3D.Printer.Slicer.API
-- GitHub Sponsors: https://github.com/sponsors/hajdu-patrik
