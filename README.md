@@ -9,7 +9,7 @@
 ![Routing](https://img.shields.io/badge/Routing-App_Router-111827?style=flat)
 ![Bundler](https://img.shields.io/badge/Bundler-Turbopack-FF6A00?style=flat)
 ![Status](https://img.shields.io/badge/Status-Production_UI-success?style=flat)
-![License](https://img.shields.io/badge/License-All_Rights_Reserved-red?style=flat)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=flat)
 
 Modern, production-ready Next.js landing page for the **3D Printer Slicer API**.
 
@@ -41,7 +41,7 @@ Any push to the `main` branch automatically triggers a new build and deployment.
 
 The website header links directly to the API documentation repository:
 
-- Documentation repo: https://github.com/hajdu-patrik/3D-Printer-Slicer-API/blob/main/README.md
+- Documentation repo: https://github.com/hajdu-patrik/3D-Printer-Slicer-API/
 
 ---
 
@@ -49,4 +49,4 @@ The website header links directly to the API documentation repository:
 
 Copyright (c) Hajdú Patrik Zsolt. All rights reserved.
 
-Published for demonstration and portfolio purposes only. Using any part of this code as a solution for an academic assignment is strictly prohibited. See [LICENSE.md](LICENSE.md) for the full terms.
+Proprietary, commissioned work published for demonstration and portfolio purposes only. No rights to use, copy, modify or distribute it are granted. See [LICENSE.md](LICENSE.md) for the full terms.

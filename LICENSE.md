@@ -1,32 +1,29 @@
-# Custom Copyright Notice & Academic Use Policy
+# Proprietary License & Commissioned Work Notice
 
 Copyright (c) Hajdú Patrik Zsolt
 All rights reserved.
 
-## 1. Author and Context
+## 1. Project Status
 
-These projects were created by a student of the Budapest University of Technology and Economics (BME), Faculty of Electrical Engineering and Informatics (VIK) for the Computer Engineering BSc program.
+This is a proprietary, closed-source project. The software and all related source code were developed as **commissioned work** for a private client.
+
+All intellectual property rights, copyrights, and other rights related to this project are owned by the client.
 
 ## 2. Purpose of Publication
 
-These repositories are published for **demonstration and portfolio purposes only**. They are intended to showcase the skills and knowledge acquired in various subjects, such as C/C++, Java, Python, TypeScript, CSS, HTML, Object-Oriented Programming, OpenGL graphics, data structures, and software engineering methodologies.
+This repository is published for **demonstration and portfolio purposes only**. It is intended to showcase the developer's skills in technologies such as TypeScript, Next.js, React, and Tailwind CSS.
 
-## 3. Strict Academic Restriction
+## 3. Strict Prohibitions
 
-All code and documentation in this repository are provided for personal viewing and educational demonstration **only**.
+**No rights, permissions, or licenses of any kind are granted to any user viewing this repository.**
 
-You are **strictly prohibited** from using, copying, modifying, submitting, or distributing any part of this code (or its derivatives) as a solution for any:
+You are strictly prohibited from:
+* **Using,**
+* **Copying,**
+* **Modifying,**
+* **Distributing,**
+* **Sublicensing,**
+* **Selling,**
+* **or creating derivative works** from any part of the code, documentation, or assets in this repository.
 
-* **Academic assignment**
-* **Laboratory work**
-* **Homework**
-* **Exam or quiz**
-* **Any other graded requirement**
-
-...at the Budapest University of Technology and Economics (BME) or any other educational institution, especially for the same or similar courses for which this code was originally created.
-
-Using this code for such purposes constitutes a severe violation of academic integrity and will be treated as plagiarism.
-
-## 4. Permitted Use
-
-You are welcome to browse, read, and analyze the code to understand the concepts implemented and to assess the author's skills for professional or portfolio review purposes.
+Any unauthorized use of this code is a breach of copyright.
