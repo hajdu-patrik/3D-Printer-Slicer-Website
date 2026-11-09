@@ -2,6 +2,13 @@
 
 All notable changes to this project are documented in this file.
 
+## [1.0.3] - 2026-11-09
+
+### Removed
+
+- Removed the **Buy me a coffee** sponsor button from the home page header; the header now shows only the **Documentation** action.
+- Removed the now-unused `sponsorUrl` constant from `app/config/links.ts` and the `coffee` variant from the shared `Button` component.
+
 ## [1.0.2] - 2026-05-14
 
 ### Removed

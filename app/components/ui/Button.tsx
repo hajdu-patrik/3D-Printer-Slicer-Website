@@ -4,15 +4,13 @@ import Link, { type LinkProps } from 'next/link';
 
 /**
  * Every variant below is the exact class string that already existed inline at each call site
- * (Buy me a coffee / Documentation / Prusa & Orca links / Try again / Retry / Go back now), only
+ * (Documentation / Prusa & Orca links / Try again / Retry / Go back now), only
  * with the bare `transition` utility narrowed to the properties that actually change on hover
  * (see the animations task: fewer watched properties, identical hover effect and timing).
  */
-export type ButtonVariant = 'coffee' | 'primary-home' | 'primary-gradient' | 'secondary-doc' | 'media';
+export type ButtonVariant = 'primary-home' | 'primary-gradient' | 'secondary-doc' | 'media';
 
 const variantClassName: Record<ButtonVariant, string> = {
-  coffee:
-    'inline-flex items-center gap-2 rounded-xl border-2 border-black bg-[#FFDD00] px-5 py-3 text-sm font-bold text-black transition-[transform,filter] duration-150 ease-in-out hover:-translate-y-0.5 hover:brightness-105',
   'primary-home':
     'inline-flex items-center justify-center gap-2 rounded-xl border-2 border-brand-ink bg-white from-brand-coral to-[#ee9160] px-5 py-3 text-sm font-bold text-brand-ink transition-[transform,filter] duration-150 ease-in-out hover:-translate-y-0.5 hover:brightness-105',
   'primary-gradient':

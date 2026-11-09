@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import Button from './components/ui/Button';
-import { sponsorUrl, documentationUrl, prusaSlicerUrl, orcaSlicerUrl, siteUrl } from './config/links';
+import { documentationUrl, prusaSlicerUrl, orcaSlicerUrl, siteUrl } from './config/links';
 import { featureCards, featureCardThemeClasses, resolveFeatureCardTheme } from './home/feature-cards';
 import PageEntryLoader from './home/page-entry-loader';
 
@@ -62,9 +62,6 @@ export default function HomePage() {
             </span>
           </a>
           <div className="flex items-center gap-3">
-            <Button as="a" variant="coffee" href={sponsorUrl} target="_blank" rel="noreferrer">
-              ☕ Buy me a coffee
-            </Button>
             <Button as="a" variant="primary-home" href={documentationUrl} target="_blank" rel="noreferrer">
               <Image
                 src="/GitHub.webp"
